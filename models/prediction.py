@@ -55,10 +55,10 @@ def predict_credit_risk(applicant_data):
     
     # Load models and preprocessing info
     try:
-        balanced_rf = joblib.load('models/balanced_rf_model.pkl')
-        xgb_model = joblib.load('models/xgb_model.pkl')
-        rf_model = joblib.load('models/rf_model.pkl')
-        preprocessing_info = joblib.load('models/preprocessing_info.pkl')
+        balanced_rf = joblib.load('balanced_rf_model.pkl')
+        xgb_model = joblib.load('xgb_model.pkl')
+        rf_model = joblib.load('rf_model.pkl')
+        preprocessing_info = joblib.load('preprocessing_info.pkl')
     except FileNotFoundError:
         raise Exception("Model files not found. Make sure to train and save the models first.")
     
